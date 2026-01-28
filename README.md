@@ -1,124 +1,99 @@
-Supporter Pulse
+# Supporter Stats Widget - File Structure
 
-Supporter Pulse is a customizable StreamElements overlay widget that displays rotating supporter highlights in a timed popup panel.
-Instead of reacting only to alerts, it cycles through your most important supporter stats with smooth animations, icons, and background images — perfect for intermission scenes and gameplay overlays.
+## 📁 Files Included
 
-✨ Features
+### **For StreamElements (All-in-One)**
+- `widget-combined.html` - **USE THIS for StreamElements** - Contains HTML, CSS, and JS all in one file
+- Just copy and paste the entire file into the StreamElements custom widget editor
 
-Timed popup animation (slide / fade in & out)
+### **For Local Development/Editing (Separated)**
+- `widget.html` - Clean HTML structure
+- `widget.css` - All styles separated for easy editing
+- `widget.js` - All JavaScript functionality
 
-Rotates through:
+### **Configuration & Documentation**
+- `widget-fields.json` - Field configuration for StreamElements settings panel
+- `SETUP_GUIDE.md` - Complete installation and customization guide
+- `QUICK_REFERENCE.md` - Fast tweaks and common modifications
 
-Recent Subscriber
+---
 
-Top Bits
+## 🚀 Quick Start
 
-Recent Bits
+### StreamElements Installation
+1. Open `widget-combined.html`
+2. Copy **ALL** contents (Ctrl+A, Ctrl+C)
+3. Go to StreamElements → My Overlays → Add Widget → Custom
+4. Paste into the HTML/CSS/JS section
+5. Click SETTINGS to configure
+6. Done! 🎉
 
-Top Gift Sub Giver
+### Local Development
+If you want to edit the files separately:
+1. Edit `widget.css` for styling changes
+2. Edit `widget.js` for functionality changes
+3. `widget.html` stays mostly unchanged
+4. When ready, combine them back into one file for StreamElements
 
-Recent Tip
+---
 
-Top Tipper
+## 📝 Which File Should I Edit?
 
-Per-section background images
+### **Want to change colors/fonts/sizes?**
+→ Edit `widget.css` or use StreamElements field settings
 
-Per-section icons
+### **Want to change timing/behavior?**
+→ Edit `widget.js` or use StreamElements field settings
 
-Smooth CSS animations
+### **Want to add new stat types?**
+→ Edit `widget.js` (statTypes array)
 
-Highly customizable fields in StreamElements:
+### **Want to use in StreamElements?**
+→ Use `widget-combined.html` (already has everything combined)
 
-Interval timing
+---
 
-Visible duration
+## 🔄 Combining Files After Editing
 
-Animation speed
+If you edit the separated files and need to recombine for StreamElements:
 
-Fonts and sizes
+1. Open `widget.html`
+2. Replace `<link rel="stylesheet" href="widget.css">` with `<style>` tag containing contents of `widget.css`
+3. Replace `<script src="widget.js"></script>` with `<script>` tag containing contents of `widget.js`
+4. Save as new combined file
+5. Upload to StreamElements
 
-Text color
+---
 
-Fallback background color
+## 💡 Pro Tips
 
-Border radius and glow
+- **Editing in StreamElements directly**: Works fine for quick tweaks
+- **Editing locally**: Better for major customizations, easier to track changes
+- **Backup your settings**: Always export your field configuration as JSON before major changes
+- **Version control**: Keep copies of working versions before experimenting
 
-Icon size and spacing
+---
 
-Overlay opacity
+## 🎨 File Structure Benefits
 
-Works on gameplay and intermission scenes
+### Separated Files
+✅ Easier to read and edit
+✅ Clear organization (HTML/CSS/JS separate)
+✅ Better for version control
+✅ Easier to share specific parts
 
-No alert spam — clean HUD-style presentation
+### Combined File
+✅ Required for StreamElements
+✅ Single file to copy/paste
+✅ Everything in one place
+✅ No file linking issues
 
-📦 Installation
+---
 
-Open StreamElements.
+## 📞 Need Help?
 
-Go to Overlay → Custom Widget.
+- Check `SETUP_GUIDE.md` for detailed instructions
+- Check `QUICK_REFERENCE.md` for common tweaks
+- Reference field settings in `widget-fields.json`
 
-Create a new widget.
-
-Copy the contents of:
-
-html.html
-
-css.css
-
-js.js
-
-Paste them into the corresponding sections in StreamElements.
-
-Configure the custom fields in the widget editor.
-
-Add the widget to your overlay scene.
-
-⚙ Configuration
-
-All customization happens inside the StreamElements widget fields, including:
-
-Popup interval
-
-Visible duration
-
-Animation speed
-
-Font family
-
-Background images per stat
-
-Icon URLs per stat
-
-Text color and size
-
-Glow strength
-
-Position and slide direction
-
-Each stat type supports its own image and icon for branding.
-
-🧪 Testing
-
-You can use the StreamElements widget preview and test buttons to simulate events and verify rotation behavior.
-
-🤝 Contributing
-
-Contributions are welcome!
-
-Fork the repository
-
-Create a feature branch
-
-Commit your changes
-
-Open a pull request
-
-Please keep code readable and documented.
-
-📄 License
-
-This project is licensed under the MIT License — free to use, modify, and distribute.
-
-❤️ Credits
-
-Built for streamers who want clean, modern supporter displays without cluttering gameplay.
+**Remember**: The separated files are for YOUR convenience when editing. StreamElements ONLY accepts the combined version!
